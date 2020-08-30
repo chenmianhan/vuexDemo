@@ -3,20 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import 'jquery'
 // 引入新建的store.js
 import store from './store.js'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-
-Vue.use(ElementUI,{size : "small"})
-Vue.config.productionTip = false
-
+Vue.use(ElementUI);
 /* eslint-disable no-new */
 new Vue({
   	el: '#app',
   	router,
   	store,//实例化
   	template: '<App/>',
-  	components: { App }
+	components: { App }
 })

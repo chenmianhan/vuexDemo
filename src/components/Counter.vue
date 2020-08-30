@@ -8,27 +8,28 @@
     <div>
     </div>
   </div>
-  </div>
 </template>
 
 <script>
     import {mapState} from 'vuex'
     export default {
-        name: 'HelloWorld',
+        name: 'Counter',
         data () {
             return {
                  show3: true
             }
         },
-        // computed : mapState({
-        //     count : state => state.count
-        // }),
+        computed : mapState({
+            count1 : state => state.counts
+        }),
         methods : {
             increment(){
-                this.$store.commit('increment')
+                this.$store.commit('increment');
+              console.log(count1());
             },
             decrement(){
-                this.$store.commit('decrement')
+                this.$store.commit('decrement'); 
+            
             },
         }
 
